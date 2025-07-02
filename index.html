@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Waves - Women Empowerment Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="dashboard-container">
+        <!-- Header Section -->
+        <header class="dashboard-header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <i class="fas fa-water fa-2x"></i>
+                    <div>
+                        <h1>Making Waves Initiative</h1>
+                        <p>Empowering Women in Kenya's Blue Economy</p>
+                    </div>
+                </div>
+                <div class="current-date">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span id="currentDate"></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Key Metrics Cards -->
+        <section class="metrics-grid">
+            <div class="metric-card primary">
+                <div class="metric-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <div class="metric-content">
+                    <h3>Total Target</h3>
+                    <div class="metric-value">11,000</div>
+                    <p>Women by 2030</p>
+                </div>
+            </div>
+            
+            <div class="metric-card success">
+                <div class="metric-icon">
+                    <i class="fas fa-user-check"></i>
+                </div>
+                <div class="metric-content">
+                    <h3>Current Progress</h3>
+                    <div class="metric-value" id="currentProgress">850</div>
+                    <p>Women Empowered</p>
+                </div>
+            </div>
+            
+            <div class="metric-card info">
+                <div class="metric-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="metric-content">
+                    <h3>2025 Target</h3>
+                    <div class="metric-value">1,100</div>
+                    <p>Women (Adjusted)</p>
+                </div>
+            </div>
+            
+            <div class="metric-card warning">
+                <div class="metric-icon">
+                    <i class="fas fa-ship"></i>
+                </div>
+                <div class="metric-content">
+                    <h3>Active Groups</h3>
+                    <div class="metric-value">4</div>
+                    <p>Counties Covered</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Charts Section -->
+        <section class="charts-section">
+            <!-- Progress Towards 2030 Goal -->
+            <div class="chart-container full-width">
+                <div class="chart-header">
+                    <h3><i class="fas fa-target"></i> Progress Towards 2030 Goal</h3>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                    <div class="progress-stats">
+                        <span class="progress-percentage" id="progressPercentage">7.7%</span>
+                        <span class="progress-remaining">9,150 women remaining</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Doughnut Chart - Regional Distribution -->
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3><i class="fas fa-map-marker-alt"></i> Regional Distribution</h3>
+                </div>
+                <canvas id="regionalChart"></canvas>
+            </div>
+
+            <!-- Line Chart - Yearly Progress -->
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3><i class="fas fa-chart-line"></i> Yearly Progress Tracking</h3>
+                </div>
+                <canvas id="progressChart"></canvas>
+            </div>
+
+            <!-- Doughnut Chart - Empowerment Categories -->
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3><i class="fas fa-fish"></i> Empowerment Categories</h3>
+                </div>
+                <canvas id="categoriesChart"></canvas>
+            </div>
+
+            <!-- Supply Chain Impact -->
+            <div class="chart-container">
+                <div class="chart-header">
+                    <h3><i class="fas fa-link"></i> Supply Chain Impact</h3>
+                </div>
+                <canvas id="supplyChainChart"></canvas>
+            </div>
+        </section>
+
+        <!-- Geographic Coverage -->
+        <section class="coverage-section">
+            <h3><i class="fas fa-globe-africa"></i> Geographic Coverage</h3>
+            <div class="locations-grid">
+                <div class="location-card active">
+                    <i class="fas fa-anchor"></i>
+                    <h4>Vanga</h4>
+                    <p>Beach Management Units: 2</p>
+                    <p>Women Engaged: 180</p>
+                </div>
+                <div class="location-card active">
+                    <i class="fas fa-fish"></i>
+                    <h4>Shimoni</h4>
+                    <p>Beach Management Units: 3</p>
+                    <p>Women Engaged: 245</p>
+                </div>
+                <div class="location-card active">
+                    <i class="fas fa-waves"></i>
+                    <h4>Kwale County</h4>
+                    <p>Beach Management Units: 5</p>
+                    <p>Women Engaged: 320</p>
+                </div>
+                <div class="location-card active">
+                    <i class="fas fa-ship"></i>
+                    <h4>Mombasa County</h4>
+                    <p>Beach Management Units: 4</p>
+                    <p>Women Engaged: 105</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="dashboard-footer">
+            <p>&copy; 2025 Making Waves Initiative | Empowering Women in Kenya's Blue Economy</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
